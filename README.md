@@ -44,3 +44,14 @@ Go to rabbitmq-managment and publish message from the administration panel to "m
 	2020-09-12 14:21:20.695  INFO 3794 --- [ntContainer#0-1] c.a.d.handler.MessageHandlerService      : Handle incoming message
 	2020-09-12 14:21:20.695  INFO 3794 --- [ntContainer#0-1] c.a.d.handler.MessageHandlerService      : some message
 ```
+
+To simulate error
+Send this payload
+```
+
+	{
+		"message": "simulate-error"	
+	}
+	
+	
+```
