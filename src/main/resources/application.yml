@@ -1,0 +1,21 @@
+app:
+  topic: my-topic
+  queue: my-queue
+  routing: com.aliirawan.*
+  dlq-exchange: deadLetterExchange
+  dlq-routing: deadLetter
+  dlq-queue: dlq #Dead Letter Queue    
+spring:
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: rapindo
+    password: secret
+    listener:
+      simple:
+        retry:
+          enabled: true
+          initial-interval: 3s
+          max-attempts: 2
+          max-interval: 10s
+          multiplier: 2
